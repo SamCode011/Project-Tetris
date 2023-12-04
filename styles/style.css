@@ -1,0 +1,109 @@
+:root {  /*element root HTML*/
+    font-size: 0.625em;
+}
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+    font-size: 1.6rem;
+    margin: auto;
+    max-width :60rem;
+    color: #d8edea;
+    background: radial-gradient(
+        circle,
+        rgba(175,196,174,1)0% ,
+        rgba(104,204,191,1)89%,
+        rgba(94,191,178,1)100%
+    );
+}
+header {
+    text-align: center;
+    margin-top :3rem;
+}
+div {
+    height :2rem;
+    width :2rem;
+}
+/* Some utility classes sam OJO */
+.t-ucase { /* mayus HTML*/
+    text-transform: uppercase;
+}
+.t-big {
+    font-size: 1.5em;
+}
+.t-wide {
+    letter-spacing: 1.5rem;
+}
+.t-close {
+    letter-spacing: 1rem ;
+}
+.fw-300 {
+    font-weight : 300 ;
+}
+.fw-400 {
+    font-weight: 400;
+}
+.score-display {
+    font-size: 5rem;
+    color: rgba(133, 121,107,0.5);
+}
+.game-area {
+    display: flex;
+    justify-content: center;
+}
+.game {
+    height :0;
+    width :300px ;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width :20rem;
+    height :40rem ;
+}
+.previous-shape {
+    width :10rem;
+    padding-left :2rem;
+    margin-top :-5rem;
+}
+.previous-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width :8rem;
+    height :8rem;
+}
+.block {
+    background-image:url(../images/blue_block.png) ;
+}
+.block2 {
+    background-image: url(../images/purple_block.png);
+}
+.block3 {
+    background-image: url(../images/green_block.png);
+}
+.block4 {
+    background-image: url(../images/navy_block.png);
+}
+.block5 {
+    background-image: url(../images/pink_block.png);
+}
+.end {
+    background-color: #d8edea;
+}
+
+.button {
+    position: relative;
+    width :22rem;
+    height :2.2rem;
+    text-align:center;
+    color: #fff;
+    letter-spacing: 1px;
+    text-decoration: none;
+    line-height: 23px;
+    font-size: 10px;
+    display: block;
+    
+}
