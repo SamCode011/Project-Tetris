@@ -62,3 +62,41 @@ const oTetromino = [
 
 const theTetrominoes =[lTectromino,zTetromino,tTetromino,oTetromino,iTetromino]
 ```
+
+ - Handling Keyboard Events for Movement Control in a Game
+ ```sh
+ function control(e) {
+    if (e.key === "ArrowRight")
+    moveright()
+else if (e.key === "ArrowUp")
+rotate()
+else if (e.key === "ArrowLeft")
+moveleft()
+else if (e.key === "ArrowDown")
+moveDown()
+}
+ ```
+- Horizontal Movement Functions with Collision Prevention in a Game
+ ```sh
+  function moveright() {
+    undraw()
+    const isAtRightEdge = current.some(index => (currentPosition + index) % width === width - 1)
+    if (!isAtRightEdge) currentPosition += 1
+    if (current.some(index => squares[currentPosition + index].classList.contains('block2'))) {
+      currentPosition -= 1
+    }
+    draw()
+  }
+
+  
+  function moveleft() {
+    undraw()
+    const isAtLeftEdge = current.some(index => (currentPosition + index) % width === 0)
+    if (!isAtLeftEdge) currentPosition -= 1
+    if (current.some(index => squares[currentPosition + index].classList.contains('block2'))) {
+      currentPosition += 1
+    }
+    draw()
+  }
+ ```
+  - These notes are intended to assist you with any questions regarding the game's functionality. While there are other important components, I've chosen to emphasize these points as they were areas that I personally found challenging to grasp.
