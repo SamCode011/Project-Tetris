@@ -100,3 +100,26 @@ moveDown()
   }
  ```
   - These notes are intended to assist you with any questions regarding the game's functionality. While there are other important components, I've chosen to emphasize these points as they were areas that I personally found challenging to grasp.
+
+  ## Tetris-CSS
+I will focus solely on the use of global styles in CSS
+```sh
+.block {
+    background-image:url(../images/blue_block.png) ;
+}
+.block2 {
+    background-image: url(../images/purple_block.png);
+}
+.block3 {
+    background-image: url(../images/green_block.png);
+}
+.block4 {
+    background-image: url(../images/navy_block.png);
+}
+.block5 {
+     background-image: url(../images/pink_block.png);
+}
+.end {
+    background-color: #d8edea;
+}
+```
