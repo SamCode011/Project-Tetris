@@ -22,7 +22,7 @@ These tools have allowed me to develop more efficient and cleaner code, improvin
 
 # Project Presentation
 
-![](./images/Tetris%20Game.gif)
+![](./images/Video%20.gif)
 
 ## Important Notes
 
