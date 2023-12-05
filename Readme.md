@@ -123,3 +123,7 @@ I will focus solely on the use of global styles in CSS
     background-color: #d8edea;
 }
 ```
+
+## CopyRight
+
+This project is undertaken for educational and learning purposes, contributing to my professional development. I hope it serves as a guide for your personal projects and professional growth.
