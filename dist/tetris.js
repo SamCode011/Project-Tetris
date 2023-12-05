@@ -11,7 +11,7 @@ let squares = Array.from(grid.querySelectorAll('div'))
 const startBtn = document.querySelector('.button')
 const hamburgerBtn = document.querySelector(' .toggler')
 const menu = document.querySelector('.menu')
-const span = document.getElementsByClassName('close')[0]
+const span = document.getElementsByClassName('close')[0]/* elige un elemento no un array */
 const scoreDisplay = document.querySelector('.score-display')
 const linesDisplay = document.querySelector('.lines-score')
 let currentIndex = 0
@@ -54,13 +54,13 @@ const colors = [
 }
 //Assign functions to keycodes
 function control(e) {
-    if (e.keyCode === 39)
+    if (e.key === "ArrowRight")
     moveright()
-else if (e.keyCode === 38)
+else if (e.key === "ArrowUp")
 rotate()
-else if (e.keyCode ===37)
+else if (e.key === "ArrowLeft")
 moveleft()
-else if (e.keyCode ===40)
+else if (e.key === "ArrowDown")
 moveDown()
 }
 //the classical behavior is to speed up the block if down button is kept pressed so doing that
