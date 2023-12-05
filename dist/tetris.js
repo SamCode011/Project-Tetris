@@ -260,7 +260,7 @@ function undraw() {
       menu.style.display = 'flex'
     })
     span.addEventListener('click', () => {
-      menu.style.display = 'none'
+      menu.style.display = 'none'/*   <button class="close fw-400">X</button> =====> const span line 14 */
     })
   
 })
