@@ -124,7 +124,7 @@ I will focus solely on the use of global styles in CSS
 }
 ```
 
-## CopyRight (c) 2020 Ania Kubow-SamFlores
+## CopyRight (c) 2020-2023 Ania Kubow-SamFlores
 
 This project is undertaken for educational and learning purposes, contributing to my professional development. I hope it serves as a guide for your personal projects and professional growth.
 
