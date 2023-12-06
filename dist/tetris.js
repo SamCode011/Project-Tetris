@@ -77,7 +77,7 @@ function handleTouchMove(event) {
   let deltaY = event.touches[0].clientY - startY ;
   console.log("DeltaX:",deltaX,"DeltaY",deltaY);
 //angle-rotation-touch
-  let angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
+  /* let angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI); */
 
    //Calculate distance for touch
    let distance = Math.sqrt(deltaX **2 +deltaY **2);
@@ -102,14 +102,14 @@ function handleTouchMove(event) {
       /* Up-movement-null */
     }
   }
-  //rotation based on touch movement
-  rotate(angle);
+ 
   //Update staring coordinates for next move push
   startX = event.touches[0].clientX ;
   startY = event.touches[0].clientY ;
 
   event.preventDefault(); // *Notes:prevent the default scrolling behavior 
-
+ //rotation based on touch movement
+/*  rotate(angle); */
 }
 
 //the classical behavior is to speed up the block if down button is kept pressed so doing that
