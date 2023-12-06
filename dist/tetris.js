@@ -75,7 +75,30 @@ function handleTouchStart(event){
 function handleTouchMove(event) {
   let deltaX = event.touches[0].clientX - startX ;
   let deltaY = event.touches[0].clientY - startY ;
-  
+
+  //main direction-root Ojo sam
+  if (Math.abs(deltaX) > Math.abs(deltY)) {
+    //Horizontal movement
+    if(deltaX > 0) {
+      moveright();
+    }else {
+      moveleft();
+    }
+
+  } else {
+    // Vertical movement
+    if(deltaY > 0){
+      moveDown();
+    }else {
+      /* Up-movement-null */
+    }
+  }
+  //Update staring coordinates for next move push
+  startX = event.touches[0].clientX ;
+  startY = event.touches[0].clientY ;
+
+  event.preventDefault(); // *Notes:prevent the default scrolling behavior 
+
 }
 
 //the classical behavior is to speed up the block if down button is kept pressed so doing that
