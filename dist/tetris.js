@@ -55,22 +55,21 @@ const colors = [
 
 //variabl
 let startX,startY ; 
-let canRotate =true ;
+let canRotate =null ;
 //Assign functions to keycodes
 function control(e) {
 if (e.key === "ArrowRight"){
   moveright();
-  canRotate=true;
+  canRotate="right";
 }else if (e.key === "ArrowUp"){
 rotate();
-canRotate =false;
+canRotate =null;
 }else if (e.key === "ArrowLeft"){
 moveleft();
-canRotate= true;
+canRotate= "left";
 }else if (e.key === "ArrowDown"){
 moveDown();
-
-canRotate=false;//Allow rotation after moving down Ojo
+canRotate="down";//Allow rotation after moving down Ojo
 }}
 
 //functions-event touch
@@ -97,16 +96,18 @@ function handleTouchMove(event) {
 
     //Horizontal movement
     if(deltaX > sensibility) {
+      canRotate="right";
       moveright();
     }else if(deltaX < -sensibility) {
+      canRotate="left"
       moveleft();
     }
 
   } else {
     // Vertical movement
     if(deltaY > sensibility){
+      canRotate ="down";
       moveDown();
-      canRotate = false;
     }else {
       /* Up-movement-null */
     }
@@ -123,9 +124,11 @@ rotateOnTouch(deltaX,deltaY) ;
 }
 
 function rotateOnTouch( deltaX,deltaY ) {
+  if(canRotate !== "right" && canRotate !== "left"){
   let angle = Math.atan2( deltaY, deltaX ) * (180 / Math.PI);
   rotate(angle);
-}
+}}
+
 function handleTouchEnd(event) {
   console.log('Touch ended!');
 }
