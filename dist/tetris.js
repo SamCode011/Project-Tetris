@@ -82,7 +82,7 @@ function handleTouchMove(event) {
    //sensibility
    let sensibility = 10 ;
    //variabl
-   let startX,startY ;
+ /*   let startX,startY ; */
 
   //main direction-root Ojo sam
   if (Math.abs(deltaX) > Math.abs(deltaY)) {
