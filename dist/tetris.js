@@ -63,6 +63,21 @@ moveleft()
 else if (e.key === "ArrowDown")
 moveDown()
 }
+//Event-Touch
+document.addEventListener('touchstart',handleTouchStart);
+document.addEventListener('touchmove',handleTouchMove) ;
+
+//functions-event touch
+function handleTouchStart(event){
+  startX = event.touches[0].clientX ;
+  startY = event.touches[0].clientY ;
+}
+function handleTouchMove(event) {
+  let deltaX = event.touches[0].clientX - startX ;
+  let deltaY = event.touches[0].clientY - startY ;
+  
+}
+
 //the classical behavior is to speed up the block if down button is kept pressed so doing that
 document.addEventListener('keydown',control)
 
