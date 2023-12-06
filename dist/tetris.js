@@ -76,6 +76,8 @@ function handleTouchMove(event) {
   let deltaX = event.touches[0].clientX - startX ;
   let deltaY = event.touches[0].clientY - startY ;
   console.log("DeltaX:",deltaX,"DeltaY",deltaY);
+//angle-rotation-touch
+  let angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
 
   //main direction-root Ojo sam
   if (Math.abs(deltaX) > Math.abs(deltaY)) {
@@ -94,6 +96,8 @@ function handleTouchMove(event) {
       /* Up-movement-null */
     }
   }
+  //rotation based on touch movement
+  rotate(angle);
   //Update staring coordinates for next move push
   startX = event.touches[0].clientX ;
   startY = event.touches[0].clientY ;
