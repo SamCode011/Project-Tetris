@@ -70,7 +70,7 @@ canRotate= true;
 }else if (e.key === "ArrowDown"){
 moveDown();
 
-canRotate=true;//Allow rotation after moving down Ojo
+canRotate=false;//Allow rotation after moving down Ojo
 }}
 
 //functions-event touch
@@ -106,7 +106,7 @@ function handleTouchMove(event) {
     // Vertical movement
     if(deltaY > sensibility){
       moveDown();
-      canRotate = true;
+      canRotate = false;
     }else {
       /* Up-movement-null */
     }
