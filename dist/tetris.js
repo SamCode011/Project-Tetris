@@ -79,18 +79,24 @@ function handleTouchMove(event) {
 //angle-rotation-touch
   let angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
 
+   //Calculate distance for touch
+   let distance = Math.sqrt(deltaX **2 +deltaY **2);
+   //sensibility
+   let sensibility = 10 ;
+
   //main direction-root Ojo sam
   if (Math.abs(deltaX) > Math.abs(deltaY)) {
+
     //Horizontal movement
-    if(deltaX > 0) {
+    if(deltaX > sensibility) {
       moveright();
-    }else {
+    }else if(deltaX < -sensibility) {
       moveleft();
     }
 
   } else {
     // Vertical movement
-    if(deltaY > 0){
+    if(deltaY > sensibility){
       moveDown();
     }else {
       /* Up-movement-null */
