@@ -52,6 +52,9 @@ const colors = [
     }
     return grid ;
 }
+
+//variabl
+  let startX,startY ; 
 //Assign functions to keycodes
 function control(e) {
     if (e.key === "ArrowRight")
@@ -81,8 +84,7 @@ function handleTouchMove(event) {
    let distance = Math.sqrt(deltaX **2 +deltaY **2);
    //sensibility
    let sensibility = 10 ;
-   //variabl
-    let startX,startY ; 
+ 
 
   //main direction-root Ojo sam
   if (Math.abs(deltaX) > Math.abs(deltaY)) {
