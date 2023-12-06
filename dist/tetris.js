@@ -117,6 +117,10 @@ function rotateOnTouch() {
   let angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
   rotate(angle);
 }
+function handleTouchEnd(event) {
+  console.log('Touch ended!');
+}
+document.addEventListener('touchend', handleTouchEnd);
 
 //the classical behavior is to speed up the block if down button is kept pressed so doing that
 document.addEventListener('keydown',control)
