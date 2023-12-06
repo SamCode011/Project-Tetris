@@ -111,6 +111,7 @@ function handleTouchMove(event) {
   event.preventDefault(); // *Notes:prevent the default scrolling behavior 
  //rotation based on touch movement
 /*  rotate(angle); */
+rotateOnTouch(deltaX,deltaY) ;
 }
 
 function rotateOnTouch() {
@@ -121,6 +122,8 @@ function handleTouchEnd(event) {
   console.log('Touch ended!');
 }
 document.addEventListener('touchend', handleTouchEnd);
+document.addEventListener('touchstart',handleTouchStart);
+document.addEventListener('touchmove',handleTouchMove);
 
 //the classical behavior is to speed up the block if down button is kept pressed so doing that
 document.addEventListener('keydown',control)
