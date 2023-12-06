@@ -58,15 +58,15 @@ let startX,startY ;
 let canRotate =true ;
 //Assign functions to keycodes
 function control(e) {
-    if (e.key === "ArrowRight"){
-    moveright();
-    canRotate=false;
+if (e.key === "ArrowRight"){
+  moveright();
+  canRotate=true;
 }else if (e.key === "ArrowUp"){
 rotate();
 canRotate =false;
 }else if (e.key === "ArrowLeft"){
 moveleft();
-canRotate= false;
+canRotate= true;
 }else if (e.key === "ArrowDown"){
 moveDown();
 
