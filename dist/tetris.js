@@ -68,7 +68,7 @@ moveDown()
 function handleTouchStart(event){
   startX = event.touches[0].clientX ;
   startY = event.touches[0].clientY ;
-  rotateOnTouch(0,0);
+ /*  rotateOnTouch(0,0); */
 }
 function handleTouchMove(event) {
   let deltaX = event.touches[0].clientX - startX ;
