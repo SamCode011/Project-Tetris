@@ -63,9 +63,6 @@ moveleft()
 else if (e.key === "ArrowDown")
 moveDown()
 }
-//Event-Touch
-document.addEventListener('touchstart',handleTouchStart);
-document.addEventListener('touchmove',handleTouchMove) ;
 
 //functions-event touch
 function handleTouchStart(event){
