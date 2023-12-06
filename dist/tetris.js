@@ -82,7 +82,7 @@ function handleTouchMove(event) {
    //sensibility
    let sensibility = 10 ;
    //variabl
- /*   let startX,startY ; */
+    let startX,startY ; 
 
   //main direction-root Ojo sam
   if (Math.abs(deltaX) > Math.abs(deltaY)) {
@@ -110,7 +110,7 @@ function handleTouchMove(event) {
   event.preventDefault(); // *Notes:prevent the default scrolling behavior 
  //rotation based on touch movement
 /*  rotate(angle); */
-rotateOnTouch(deltaX,deltaY) ;
+rotateOnTouch(/* deltaX,deltaY */) ;
 }
 
 function rotateOnTouch(deltaX,deltaY) {
