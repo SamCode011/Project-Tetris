@@ -113,7 +113,7 @@ function handleTouchMove(event) {
 rotateOnTouch(deltaX,deltaY) ; 
 }
 
-function rotateOnTouch(/* deltaX,deltaY */) {
+function rotateOnTouch( deltaX,deltaY ) {
   let angle = Math.atan2( deltaY, deltaX ) * (180 / Math.PI);
   rotate(angle);
 }
