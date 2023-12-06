@@ -71,7 +71,7 @@ document.addEventListener('touchmove',handleTouchMove) ;
 function handleTouchStart(event){
   startX = event.touches[0].clientX ;
   startY = event.touches[0].clientY ;
-  rotateOnTouch();
+  rotateOnTouch(0,0);
 }
 function handleTouchMove(event) {
   let deltaX = event.touches[0].clientX - startX ;
@@ -84,6 +84,8 @@ function handleTouchMove(event) {
    let distance = Math.sqrt(deltaX **2 +deltaY **2);
    //sensibility
    let sensibility = 10 ;
+   //variabl
+   let startX,startY ;
 
   //main direction-root Ojo sam
   if (Math.abs(deltaX) > Math.abs(deltaY)) {
@@ -114,7 +116,7 @@ function handleTouchMove(event) {
 rotateOnTouch(deltaX,deltaY) ;
 }
 
-function rotateOnTouch() {
+function rotateOnTouch(deltaX,deltaY,angle) {
   let angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
   rotate(angle);
 }
