@@ -77,7 +77,7 @@ function handleTouchMove(event) {
   let deltaY = event.touches[0].clientY - startY ;
 
   //main direction-root Ojo sam
-  if (Math.abs(deltaX) > Math.abs(deltY)) {
+  if (Math.abs(deltaX) > Math.abs(deltaY)) {
     //Horizontal movement
     if(deltaX > 0) {
       moveright();
