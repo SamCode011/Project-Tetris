@@ -303,3 +303,6 @@ div {
     color: rgba(24, 39, 51, 0.85);
   }
   
+  .your-touch-element {
+    touch-action: manipulation;
+  }

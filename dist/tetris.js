@@ -75,6 +75,7 @@ function handleTouchStart(event){
 function handleTouchMove(event) {
   let deltaX = event.touches[0].clientX - startX ;
   let deltaY = event.touches[0].clientY - startY ;
+  console.log("DeltaX:",deltaX,"DeltaY",deltaY);
 
   //main direction-root Ojo sam
   if (Math.abs(deltaX) > Math.abs(deltaY)) {
