@@ -54,18 +54,24 @@ const colors = [
 }
 
 //variabl
-  let startX,startY ; 
+let startX,startY ; 
+let canRotate =true ;
 //Assign functions to keycodes
 function control(e) {
-    if (e.key === "ArrowRight")
-    moveright()
-else if (e.key === "ArrowUp")
-rotate()
-else if (e.key === "ArrowLeft")
-moveleft()
-else if (e.key === "ArrowDown")
-moveDown()
-}
+    if (e.key === "ArrowRight"){
+    moveright();
+    canRotate=false;
+}else if (e.key === "ArrowUp"){
+rotate();
+canRotate =false;
+}else if (e.key === "ArrowLeft"){
+moveleft();
+canRotate= false;
+}else if (e.key === "ArrowDown"){
+moveDown();
+
+canRotate=true;//Allow rotation after moving down Ojo
+}}
 
 //functions-event touch
 function handleTouchStart(event){
@@ -100,6 +106,7 @@ function handleTouchMove(event) {
     // Vertical movement
     if(deltaY > sensibility){
       moveDown();
+      canRotate = true;
     }else {
       /* Up-movement-null */
     }
