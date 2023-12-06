@@ -110,7 +110,7 @@ function handleTouchMove(event) {
   event.preventDefault(); // *Notes:prevent the default scrolling behavior 
  //rotation based on touch movement
 /*  rotate(angle); */
-rotateOnTouch(/* deltaX,deltaY */) ;
+/* rotateOnTouch(deltaX,deltaY) ; */
 }
 
 function rotateOnTouch(deltaX,deltaY) {
