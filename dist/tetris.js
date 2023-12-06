@@ -71,6 +71,7 @@ document.addEventListener('touchmove',handleTouchMove) ;
 function handleTouchStart(event){
   startX = event.touches[0].clientX ;
   startY = event.touches[0].clientY ;
+  rotateOnTouch();
 }
 function handleTouchMove(event) {
   let deltaX = event.touches[0].clientX - startX ;
@@ -110,6 +111,11 @@ function handleTouchMove(event) {
   event.preventDefault(); // *Notes:prevent the default scrolling behavior 
  //rotation based on touch movement
 /*  rotate(angle); */
+}
+
+function rotateOnTouch() {
+  let angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
+  rotate(angle);
 }
 
 //the classical behavior is to speed up the block if down button is kept pressed so doing that
