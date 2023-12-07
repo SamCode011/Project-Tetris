@@ -1,0 +1,3 @@
+https://github.com/kubowania/Tetris/blob/master/js/app.js
+https://www.youtube.com/watch?v=lhNdUVh3qCc&t=4778s
+https://www.freecodecamp.org/espanol/news/40-proyectos-de-javascript-para-principiantes-ideas-faciles-para-empezar-a-codificar-en-js/#c-mo-crear-siete-juegos-cl-sicos-con-ania-kubow

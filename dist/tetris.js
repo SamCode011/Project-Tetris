@@ -54,8 +54,8 @@ const colors = [
 }
 
 //variabl
-let startX,startY ; 
-let canRotate =null ;
+let startX,startY ;  //touch
+let canRotate =null ; //touch
 //Assign functions to keycodes
 function control(e) {
 if (e.key === "ArrowRight"){
